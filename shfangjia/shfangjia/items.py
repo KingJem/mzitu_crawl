@@ -10,14 +10,14 @@ import scrapy
 
 class ShfangjiaItem(scrapy.Item):
     # define the fields for your item here like:
-    huxing = scrapy.Field()
-    chaoxiang = scrapy.Field()
-    daxiao = scrapy.Field()
-    louceng = scrapy.Field()
+    # huxing = scrapy.Field()
+    # chaoxiang = scrapy.Field()
+    # daxiao = scrapy.Field()
+    # louceng = scrapy.Field()
     danjia = scrapy.Field()
-    zhuangxiu = scrapy.Field()
+    # zhuangxiu = scrapy.Field()
     jiage = scrapy.Field()
     diqu = scrapy.Field()
     diqu2 = scrapy.Field()
-    hexinmaidian = scrapy.Field()
-    yezhuxintai = scrapy.Field()
+    # hexinmaidian = scrapy.Field()
+    # yezhuxintai = scrapy.Field()

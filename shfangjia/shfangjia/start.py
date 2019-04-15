@@ -10,8 +10,11 @@
 
 from scrapy import cmdline
 
-# cmdline.execute("scrapy crawl fangjia -o info.csv -t csv".split())
-cmdline.execute('scrapy crawl fangjia'.split())
+cmdline.execute("scrapy crawl fangjia -o test.csv -t csv".split())
+# cmdline.execute("scrapy crawl fangjia ".split())
+# cmdline.execute('scrapy crawl fangjia'.split())
+# cmdline.execute('scrapy crawl fangjia -s JOBDIR=crawls/temp_dir2'.split()) # 可中断恢复的爬虫
+
 
 #  把这个项目的数据放到mysql数据库中，
 # 搭建一个动态代理池，抓取免费代理，无效从池中移除

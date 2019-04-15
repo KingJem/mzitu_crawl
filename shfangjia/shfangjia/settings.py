@@ -52,8 +52,8 @@ DOWNLOAD_DELAY = 3
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    # 'shfangjia.middlewares.ProxyMiddleware':300,
-    'shfangjia.middlewares.RandomUserAgentMiddleware': 100
+    # 'shfangjia.middlewares.ProxyMiddleware': 300,
+    'shfangjia.middlewares.RandomUserAgentMiddleware': 100,
 }
 
 # Enable or disable extensions
@@ -64,9 +64,9 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'shfangjia.pipelines.ShfangjiaPipeline': 300,
-# }
+ITEM_PIPELINES = {
+    'shfangjia.pipelines.ShfangjiaPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,6 +88,7 @@ DOWNLOADER_MIDDLEWARES = {
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
 # MYSQL_HOST = "localhost"
 # MYSQL_DBNAME = "yyyyyy"
 # MYSQL_USER = "root"
@@ -95,4 +96,8 @@ DOWNLOADER_MIDDLEWARES = {
 #
 # ITEM_PIPELINES = {
 #    'Spider.pipelines.spiderPipeline': 300,
+# }
+
+# ITEM_PIPELINES = {
+#    'shfangjia.pipelines.JsonWithEncodingShfangjiaPipeline': 300,
 # }
