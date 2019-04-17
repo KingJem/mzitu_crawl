@@ -64,9 +64,7 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'shfangjia.pipelines.ShfangjiaPipeline': 300,
-}
+#
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -98,6 +96,6 @@ ITEM_PIPELINES = {
 #    'Spider.pipelines.spiderPipeline': 300,
 # }
 
-# ITEM_PIPELINES = {
-#    'shfangjia.pipelines.JsonWithEncodingShfangjiaPipeline': 300,
-# }
+ITEM_PIPELINES = {
+    'shfangjia.pipelines.ShfangjiaPipeline': 300,
+}

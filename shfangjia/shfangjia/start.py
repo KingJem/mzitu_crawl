@@ -10,7 +10,8 @@
 
 from scrapy import cmdline
 
-cmdline.execute("scrapy crawl fangjia -o test.csv -t csv".split())
+# cmdline.execute("scrapy crawl fangjia2 -o test2.csv -t csv".split())
+cmdline.execute("scrapy crawl fangjia2 ".split())
 # cmdline.execute("scrapy crawl fangjia ".split())
 # cmdline.execute('scrapy crawl fangjia'.split())
 # cmdline.execute('scrapy crawl fangjia -s JOBDIR=crawls/temp_dir2'.split()) # 可中断恢复的爬虫

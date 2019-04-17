@@ -16,7 +16,7 @@ import pymysql
 class ShfangjiaPipeline(object):
     def __init__(self):
         # 连接MySQL数据库
-        self.connect = pymysql.connect('localhost', 'root', 'root', 'sh_test')
+        self.connect = pymysql.connect('localhost', 'root', 'root', 'test')
         self.cursor = self.connect.cursor()
 
     def process_item(self, item, spider):
@@ -27,8 +27,8 @@ class ShfangjiaPipeline(object):
         #         item['jiage'], item['diqu'],item['diqu2']))
         # sql = "insert into fangjia(DIQU,DIQU2,DANJIA,JIAGE) values('%s','%s','%s')"%( item["diqu"], item["diqu2"], item["jiage"])
         # sql = "insert into fangjia(id,danjia,diqu,diqu2,jiage) values(null,item['danjia'],item['diqu'],item['diqu2'],item['jiage'])"
-        sql = """insert into fangjia(id,danjia,diqu,diqu2,jiage) values(null,%s,%s,%s,%s)"""
-        self.cursor.execute(sql, (item['danjia'], item['diqu'], item['diqu2'], item['jiage']))
+        sql = """insert into fangjia(id,xiaoqu,dizhi,danjia,jiage) values(null,%s,%s,%s,%s)"""
+        self.cursor.execute(sql, (item['xiaoqu'], item['dizhi'], item['danjia'], item['jiage']))
         self.connect.commit()
         return item
 
